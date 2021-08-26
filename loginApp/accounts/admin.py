@@ -6,6 +6,7 @@ from authemail.admin import EmailUserAdmin
 class MyUserAdmin(EmailUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
+        (('Personal Info'), {'fields': ('first_name', 'last_name')}),
         ('Permissions', {'fields': ('is_active', 'is_staff',
                                     'is_superuser', 'is_verified',
                                     'groups', 'user_permissions')}),
